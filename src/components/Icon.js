@@ -1,18 +1,15 @@
 import React from "react";
 import {FaTimes, FaPen, FaRegCircle} from "react-icons/fa";
 
-const Icon = ({name}) => (
-    <div>
-        <h1>
-            <FaTimes className="icon"/>
-        </h1>
-        <h1>
-            <FaRegCircle className="icon"/>
-        </h1>
-        <h1>
-            <FaPen className="icon"/>
-        </h1>
-    </div>
-)
+const Icon = ({name}) => {
+    switch (name) {
+        case 'Circle':
+            return <FaRegCircle className="icons"/>
+        case 'Cross':
+            return <FaTimes className="icons"/>
+        default:
+            return <FaPen className="icons"/>
+    }
+}
 
 export default Icon;
